@@ -7,9 +7,9 @@
     
     
       <title>
-        slide
+        W3C CSS spec/draft を読む時に役立つValue Processingの概念
       </title>
-      <meta property="og:title" content="slide" />
+      <meta property="og:title" content="W3C CSS spec/draft を読む時に役立つValue Processingの概念" />
       <meta property="og:type" content="article" />
     
     
@@ -17,12 +17,12 @@
     
     
     
-  <link href="vendor.7.6ed4746ef5aa47f103ea.css" rel="stylesheet"><link href="main.4.4fb0a9f4564dccd0815b.css" rel="stylesheet"></head>
+  <link href="vendor.7.901a58fd10e5acf661c5.css" rel="stylesheet"><link href="main.4.4fb0a9f4564dccd0815b.css" rel="stylesheet"></head>
 
   <body>
     <div id="root">
       <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="btn-sidebar" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg><article id="webslides"><section class="aligncenter"><h1>W3C CSS spec/draft を読む時に役立つValue Processingの概念</h1><p>@arayaryoma</p><p>2020/09/01 #納涼_study</p></section><section class="aligncenter"><p>W3C Understanding the CSS Specifications(<a href="https://www.w3.org/Style/CSS/read)%E3%81%AB%E3%81%AFCSS">https://www.w3.org/Style/CSS/read)にはCSS</a> specはまずこれを読めと書いてある。</p><p>この中でも、<a href="https://www.w3.org/TR/css-cascade-4/">CSS Cascading and Inheritance</a>に記述されているValue ProcessingはCSSのspec/draftを読む際にたいへん役立つためここで紹介する。</p><p><img src="9877eb9a3ab9af9d32727213ccf36ceb.webp" alt="Screen capture of https://www.w3.org/Style/CSS/read"/></p></section><section class="aligncenter"><p><a href="https://www.w3.org/TR/css-cascade-4/#value-stages">Value Processing</a>には、UAが、parseしてtree化したdocumentのelementに対してstyleを適用する、
 最終的な値を計算するときの処理手順が記載されている。</p><p>この一連の計算ではparseされたstylesheetの値は下記の順に計算/変換されていく。</p><p>これらの語彙はCSS spec/draftのいたるところで出てくるため、これを知っておくとspec/draftがかなり読みやすくなる。</p><ol><li>declared values</li><li>cascadced values</li><li>specified values</li><li>computed values</li><li>used values</li><li>actual values</li></ol></section><section class="aligncenter"><h2>declared values</h2><p>stylesheetで宣言された値。同じpropertyに対し複数存在する可能性があり、順不同リストとしてcascading(別の章)に渡される。</p></section><section class="aligncenter"><h2>cascaded values</h2><p>cascadingの結果の値。declared valuesの中で、cascadeに勝利したもの。</p></section><section class="aligncenter"><h2>specified values</h2><p>cascaded valueにdefaultingを通した結果。</p><p>stylesheetの作成者が指定したすべてのelementのすべてのpropertyに存在することが保証されている。</p><h3>*<a href="https://www.w3.org/TR/css-cascade-4/#defaulting">defaulting</a></h3><p>Initial values, Inheritance, keywordからspecified valueを決定する</p></section><section class="aligncenter"><h2>computed values</h2><ul><li>相対値は絶対値化される </li><li>計算コストが高い絶対値化はここでは行わない(<code>width: auto</code>など)</li><li>継承ではこの値が親から子へ継承される</li><li>property definition tableで定義されている方法で解決される。</li><li>getComputedStyle()はこの値を返すわけではない</li><li>Chrome Devtools のComputedもこの値ではない</li></ul></section><section class="aligncenter"><h2>used values</h2><ul><li>レイアウトで使われる絶対理論値</li><li>widthなどは祖先のレイアウトを決定してからじゃないと解決できないため、ここで初めて絶対値化される。</li></ul></section><section class="aligncenter"><h2>actual values</h2><ul><li>used valuesがそのまま使えない場合はもう1ステップある</li><li>floatはintに丸められる</li><li>「ここを見ればすべてのレイアウト結果がわかる」というわけではない<ul><li><code>page-break-after</code> など</li></ul></li></ul></section><section class="aligncenter"><h2><a href="https://www.w3.org/TR/css-cascade-4/#stages-examples">value processingの例</a></h2><p><img src="f7c2594cec9c67871e61384767388691.webp" alt="example table"/></p></section></article>
     </div>
-  <script type="text/javascript" src="runtime.6e384253764eb28ee58c.bundle.js"></script><script type="text/javascript" src="vendor.7.6ed4746ef5aa47f103ea.bundle.js"></script><script type="text/javascript" src="main.4.4fb0a9f4564dccd0815b.bundle.js"></script></body>
+  <script type="text/javascript" src="runtime.737ce0115bc09faef13b.bundle.js"></script><script type="text/javascript" src="vendor.7.901a58fd10e5acf661c5.bundle.js"></script><script type="text/javascript" src="main.4.4fb0a9f4564dccd0815b.bundle.js"></script></body>
 </html>
