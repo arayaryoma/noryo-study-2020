@@ -1,0 +1,9 @@
+{
+  "name": "noryo-study-2020",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "fusuma": "^1.16.0"
+  }
+}
