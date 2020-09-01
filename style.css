@@ -1,0 +1,10 @@
+li {
+    line-height: 2em;
+}
+img {
+    max-height: 80vh;
+}
+p {
+    text-align: left;
+    margin-block-end: 1em;
+}
